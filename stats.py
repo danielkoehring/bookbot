@@ -11,3 +11,10 @@ def count_characters(text):
         else:
             new_dict[char.lower()] = 1
     return new_dict
+
+
+def sorted_char_count(char_count):
+    new_list = []
+    for key, value in char_count.items():
+        new_list.append({"char": key, "count": value})
+    return sorted(new_list, key=lambda item: item["count"], reverse=True)
